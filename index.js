@@ -28,19 +28,17 @@ mongoose.connect(connectionString)
 
 
 
-let chat1 = new Chat({
-    from : "Ammad",
-    to : "Midhat",
-    msg: "I Love you!",
-    created_at : new Date()
+app.get("/", async (req,res) => {
+   let datas = await Chat.find();
+   res.render("index.ejs", { datas })
 
 });
-
-chat1.save()
-.then((res) => console.log(res));
-
 
 
 app.listen(8080, () => {
-  console.log('Server is running on port 8080');
-});
+  console.log("Server is running on port 8080")
+})
+
+
+
+
