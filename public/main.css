@@ -1,0 +1,37 @@
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+.container-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin: 40px;
+}
+
+button {
+  padding: 12px 23px;
+  border: none;
+  outline: none;
+  background-color: blueviolet;
+  color: White;
+  cursor: pointer;
+  font-size: 19px;
+  border-radius: 8px;
+}

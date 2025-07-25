@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+    margin-left: 20px;
+}
+h1,h2 {
+    text-align: center;
+    margin: 10px;
+}
+.chat {
+    background-color: aliceblue;
+    margin: 10px 12px;
+    padding: 20px;
+    display: inline-block;
+    
+}
+.msg {
+    background-color: dodgerblue;
+    padding: 12px;
+    color: white;
+    border-radius: 20px;
+    margin: 5px 0px 5px 0px;
+}
+button {
+  padding: 12px 23px;
+  border: none;
+  outline: none;
+  background-color: blueviolet;
+  color: White;
+  cursor: pointer;
+  font-size: 19px;
+  border-radius: 8px;
+  position:relative;
+  left:50%;
+  transform: translate(-50%,-50%);
+  margin-top: 20px;
+  
+}
