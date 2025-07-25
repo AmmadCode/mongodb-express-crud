@@ -4,12 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Mini Chat App</title>
 </head>
 
 <body>
     <h1>All Chats</h1>
-    <h2>Welcome to the Chat</h2>
+    <form  method="GET"  action="/chats/new">
+        <button>New Chat</button>
+        <br>
+    </form>
     <% for(data of datas) { %>
         <div class="chat">
             <p>From: <%- data.from %></p>
@@ -18,6 +22,9 @@
             </div>
           
             <p>Received by: <%- data.to %></p>
+            <hr>
+            <p> <%= data.created_at.toString().split(' ')[4] %></p>
+            <p>   <%= data.created_at.toString().split(" ").slice(0,4).join(" ") %></p>
 
         </div>
         <% } %>
