@@ -11,7 +11,7 @@
 <body>
     <h1>All Chats</h1>
     <form  method="GET"  action="/chats/new">
-        <button>New Chat</button>
+        <button class="btn">New Chat</button>
         <br>
     </form>
     <% for(data of datas) { %>
@@ -19,6 +19,9 @@
             <p>From: <%- data.from %></p>
             <div class="msg">
                   <p>Message: <%- data.msg %></p>
+                  <form method="GET" action="/chats/<%= data._id %>/edit">
+                    <button>Edit Message</button>
+                  </form>
             </div>
           
             <p>Received by: <%- data.to %></p>
@@ -27,6 +30,7 @@
             <p>   <%= data.created_at.toString().split(" ").slice(0,4).join(" ") %></p>
 
         </div>
+        <br>
         <% } %>
 
 </body>
