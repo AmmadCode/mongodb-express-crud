@@ -2,7 +2,7 @@
 
 A modern, responsive chat application built with Node.js, Express, MongoDB, and EJS templating.
 
-![Mini Chat App](https://via.placeholder.com/800x400?text=Mini+Chat+App)
+
 
 ## Features
 
@@ -96,13 +96,6 @@ mini-chat-app/
 | created_at | Date     | When the chat was created                  |
 | updated_at | Date     | When the chat was last updated (if any)    |
 
-## Screenshots
-
-![Welcome Page](https://via.placeholder.com/400x200?text=Welcome+Page)
-![Chat List](https://via.placeholder.com/400x200?text=Chat+List)
-![New Chat](https://via.placeholder.com/400x200?text=New+Chat)
-![Edit Chat](https://via.placeholder.com/400x200?text=Edit+Chat)
-![Delete Confirmation](https://via.placeholder.com/400x200?text=Delete+Confirmation)
 
 ## Future Enhancements
 
