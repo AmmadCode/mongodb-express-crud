@@ -38,8 +38,12 @@
                     </form>
                 </div>
                 <div class="chat-time">
-                    <p><%= data.created_at.toString().split(' ')[4] %></p>
+                    <p>Created: <%= data.created_at.toString().split(' ')[4] %></p>
                     <p><%= data.created_at.toString().split(" ").slice(0,4).join(" ") %></p>
+                    <% if(data.updated_at) { %>
+                        <p class="updated-time">Updated: <%= data.updated_at.toString().split(' ')[4] %></p>
+                        <p class="updated-date"><%= data.updated_at.toString().split(" ").slice(0,4).join(" ") %></p>
+                    <% } %>
                 </div>
             </div>
             <% } %>
