@@ -24,7 +24,7 @@ A modern, responsive chat application built with Node.js, Express, MongoDB, and 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/mini-chat-app.git
+   git clone https://github.com/AmmadCode/mongodb-express-crud.git
    cd mini-chat-app
    ```
 
