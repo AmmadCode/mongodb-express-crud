@@ -3,20 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
     <title>New Chat</title>
 </head>
 <body>
-    <h3><i>Write New Chat...</i></h3>
-    <form  method="POST"  action="/chats">
-        <input  placeholder="Who are you?" name="from">
-        <br><br>
-        <textarea name="msg" cols="30" rows="10">
-            Enter Message
-        </textarea>
-        <br><br>
-        <input  placeholder="Enter Reciever" name="to">
-        <br><br>
-        <button>Create Chat</button>
-    </form>
+    <div class="container">
+        <div class="page-header">
+            <h1>Create New Chat</h1>
+            <a href="/chats" class="btn btn-secondary">Back to Chats</a>
+        </div>
+        
+        <div class="form-container">
+            <form method="POST" action="/chats">
+                <div class="form-group">
+                    <label for="from" class="form-label">From:</label>
+                    <input type="text" id="from" name="from" class="form-control" placeholder="Your name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="msg" class="form-label">Message:</label>
+                    <textarea name="msg" id="msg" class="form-control" placeholder="Enter your message here..." required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="to" class="form-label">To:</label>
+                    <input type="text" id="to" name="to" class="form-control" placeholder="Recipient's name" required>
+                </div>
+                
+                <button type="submit" class="btn">Create Chat</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

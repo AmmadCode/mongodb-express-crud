@@ -3,17 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
     <title>Edit Message</title>
 </head>
 <body>
-    <h3><i>Edit your Chat</i>:  <%= chat._id %></h3>
-    <p>This Chat was send from  <b><%= chat.from %></b> to <b><%= chat.to %> </b>  </p>
-    <form method="POST"  action="/chats/<%= chat._id %>?_method=PUT">
-        <textarea name="msg" cols="30" rows="10">
-            <%= chat.msg %>
-        </textarea>
-        <button>Edit</button>
-    </form>
-    
+    <div class="container">
+        <div class="page-header">
+            <h1>Edit Chat</h1>
+            <a href="/chats" class="btn btn-secondary">Back to Chats</a>
+        </div>
+        
+        <div class="form-container">
+            <div class="chat-info">
+                <p>This chat was sent from <span class="chat-from"><%= chat.from %></span> to <span class="chat-to"><%= chat.to %></span></p>
+                <p class="chat-id">Chat ID: <%= chat._id %></p>
+            </div>
+            
+            <form method="POST" action="/chats/<%= chat._id %>?_method=PUT">
+                <div class="form-group">
+                    <label for="msg" class="form-label">Message:</label>
+                    <textarea name="msg" id="msg" class="form-control"><%= chat.msg.trim() %></textarea>
+                </div>
+                
+                <button type="submit" class="btn">Update Message</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
